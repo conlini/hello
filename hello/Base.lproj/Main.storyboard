@@ -25,40 +25,34 @@
                                         <rect key="frame" x="20" y="20" width="87" height="21"/>
                                         <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="13"/>
                                         <nil key="highlightedColor"/>
-                                        <variation key="widthClass=compact" misplaced="YES">
-                                            <rect key="frame" x="0.0" y="0.0" width="67" height="15"/>
-                                        </variation>
                                     </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter the meal name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ztf-hN-Hn9">
                                         <rect key="frame" x="20" y="49" width="360" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
-                                        <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
-                                            <rect key="frame" x="0.0" y="23" width="360" height="39"/>
-                                        </variation>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n7T-f3-vdW">
                                         <rect key="frame" x="20" y="87" width="141" height="30"/>
                                         <state key="normal" title="Set default label text"/>
-                                        <variation key="widthClass=compact" ambiguous="YES">
-                                            <rect key="frame" x="0.0" y="70" width="141" height="30"/>
+                                        <variation key="widthClass=compact" misplaced="YES">
+                                            <rect key="frame" x="0.0" y="61" width="141" height="30"/>
                                         </variation>
+                                        <connections>
+                                            <action selector="setDefaultLabelText:" destination="BYZ-38-t0r" eventType="touchUpInside" id="g2h-0X-C0D"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="100" id="8WH-De-cXy"/>
                                     <constraint firstAttribute="trailing" secondItem="Ztf-hN-Hn9" secondAttribute="trailing" id="tET-p2-9Id"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
-                                        <exclude reference="8WH-De-cXy"/>
                                         <exclude reference="tET-p2-9Id"/>
                                     </mask>
                                 </variation>
                                 <variation key="widthClass=compact" alignment="top" axis="vertical" misplaced="YES">
-                                    <rect key="frame" x="20" y="67" width="360" height="100"/>
+                                    <rect key="frame" x="20" y="67" width="360" height="91"/>
                                     <mask key="constraints">
-                                        <include reference="8WH-De-cXy"/>
                                         <include reference="tET-p2-9Id"/>
                                     </mask>
                                 </variation>
@@ -85,6 +79,11 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="mealLabel" destination="sSK-Fl-0Bn" id="QAa-3B-qzP"/>
+                        <outlet property="mealNameTxtFLD" destination="Ztf-hN-Hn9" id="JxJ-Cl-CMb"/>
+                        <outlet property="mealResetBtn" destination="n7T-f3-vdW" id="LPi-N4-PIx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
